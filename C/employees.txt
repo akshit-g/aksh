@@ -1,0 +1,25 @@
+WAP that stores information of employees with the attributes employee name, DOB, DOJ, and salary.
+Increase the salary of all the employees who are having their birth day in January by 15%
+
+struct date
+{
+    int dd, mm, yy
+} ;
+
+struct employee
+{
+    char name[50]
+    date DOB
+    date DOJ
+    int salary
+} ;
+
+struct employee emp[50]
+for {i=0; i<50; i++}
+
+/
+scanf("%s, emp[1].DOB.mm)
+/
+
+if (emp[i].DOB.mm == 1)
+salary = salary + 0.15*salary
