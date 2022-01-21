@@ -8,10 +8,12 @@ void main()
 {  
   int n, arr[n]; 
  
-  printf ("Enter the number of the elements: ");  
-  scanf ("%d", &n);  
-  int i;  
-  printf ("Enter %d elements of the array: ", n);  
+  printf ("Enter the number of the elements: ");  // input from user
+  scanf ("%d", &n);
+
+  int i;
+
+  printf ("Enter %d elements of the array: ", n);
   for (i=0; i<n; i++ )  
   {  
     scanf ("%d", &arr[i]);  
@@ -20,16 +22,16 @@ void main()
   max = arr[0];  
   min = arr[0];  
  
-  for ( i=0; i<n; i++ )  
+  for (i=0; i<n; i++)  
   {  
-    if ( arr[i]>max )  
-    {  
-      max = arr[i];  
-    }  
+    if (arr[i]>max)  // maximum condition
+    {
+      max = arr[i];
+    }
  
-    if ( arr[i]<min )  
+    if (arr[i]<min)  // minimum condition
     {  
-      min = arr[i];  
+      min = arr[i];
     }  
   }  
  

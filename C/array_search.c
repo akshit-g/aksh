@@ -1,20 +1,8 @@
-/**************************
+/*
 Program to search an array
-***************************/
+*/
 
 #include<stdio.h>
- 
-// Function to implement search operation
-int findElement(int arr[], int n,
-                int key)
-{
-    int i;
-    for (i = 0; i < n; i++)
-        if (arr[i] == key)
-            return i;
- 
-    return -1;
-}
  
 // Driver Code
 int main()
@@ -32,4 +20,17 @@ int main()
         printf("Element Found at Position: %d", position + 1 );
  
     return 0;
+}
+
+
+// Function to implement search operation
+int findElement(int arr[], int n,
+                int key)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        if (arr[i] == key)
+            return i;
+ 
+    return -1;
 }

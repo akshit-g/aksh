@@ -1,6 +1,6 @@
-/***********************************************************************
+/*
 Given 2 numbers. Calculate sum, difference, multiplication and division
-************************************************************************/
+*/
 
 #include <stdio.h>
 int main()  
@@ -12,12 +12,12 @@ int main()
     printf("Input any two numbers separated by comma : ");  
     scanf("%d,%d", &num1, &num2);  
   
-    //All arithmetic operations
-    sum = num1 + num2;  
-    sub = num1 - num2;  
-    mult = num1 * num2;  
-    div = (float)num1 / num2;  
-    mod = num1 % num2;  
+    // all arithmetic operations
+    sum = num1 + num2;  // sum
+    sub = num1 - num2;  // difference
+    mult = num1 * num2;  // multiplication
+    div = (float)num1 / num2;  // division
+    mod = num1 % num2;  // modulus
   
     //Results
     printf("The sum of the given numbers : %d\n", sum);  
