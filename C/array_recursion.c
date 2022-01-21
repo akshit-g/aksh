@@ -1,6 +1,6 @@
-/***********************************************
+/*
 Find sum of all array elements using recursion
-************************************************/
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
