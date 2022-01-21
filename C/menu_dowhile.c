@@ -1,12 +1,15 @@
+/*
+Menu driven program using do-while loop
+*/
+
 #include <stdio.h>
 
-// Start of main() function
 int main() {
     // Making continue response global to the menu
     char ans;
 
     do {
-        // Printing pattern
+        // printing pattern
         int n;
 
         printf("Enter the number of rows: ");
@@ -19,11 +22,11 @@ int main() {
             printf("\n");
         }
 
-        // Prompting user to enter a choice to continue
+        // prompting user to enter a choice to continue
         printf("\nDo you want to continue? (Y/N): ");
         fflush(stdin);
         scanf("%c", &ans);
-    } while (ans == 'Y' || ans == 'y'); // Exit condition for do-while (with ; :))
+    } while (ans == 'Y' || ans == 'y'); // exit condition for do-while (with ; :))
 
     printf("\nOutside loop!");
 

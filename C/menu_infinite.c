@@ -1,6 +1,9 @@
+/*
+Menu driven program using infinite loop
+*/
+
 #include <stdio.h>
 
-// Start of main() function
 int main() {
     // Making continue response global to the menu
     char ans;
