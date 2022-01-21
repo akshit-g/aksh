@@ -1,6 +1,6 @@
-/*************************************************
+/*
 Finding roots of a quadratic equation
-**************************************************/
+*/
 
 
 #include <math.h>
@@ -12,9 +12,9 @@ void main()
     float a, b, c, det, root1, root2, real, img;  
 
     printf("\n Enter the value of coefficient x, y and z: \n ");  
-    scanf("%f %f %f", &x, &y, &z);  
+    scanf("%f %f %f", &a, &b, &c);  
  
-    det = b * b - 4 * a * c;      
+    det = b * b - 4 * a * c;
     //conditions for real and different roots  
     if (det > 0)  
     {  
@@ -29,9 +29,9 @@ void main()
     }  
     // if det < 0, both roots are real and imaginary  
     else {  
-        real = -y / (2 * x);  
-        img = sqrt(-det) / (2 * x);  
+        real = -b / (2 * a);  
+        img = sqrt(-det) / (2 * a);  
         printf("\n value of root1 = %.2f + %.2fi and value of root2 = %.2f - %.2fi ", real, img, real, img);  
     }  
     getch();  
-    }  
+}  

@@ -1,5 +1,6 @@
 /*
-Multiply two given numbers without using the arithmetic binary multiplication operator using for loop
+Multiply two given numbers without using the arithmetic binary
+multiplication operator using for loop
 */
 
 #include <stdio.h>
