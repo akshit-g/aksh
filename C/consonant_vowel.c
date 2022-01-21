@@ -1,6 +1,6 @@
-/**********************************************************
+/*
 C program to check vowel or consonant using switch case
-***********************************************************/
+*/
 
 #include <stdio.h>
 
@@ -8,10 +8,10 @@ int main()
 {
     char ch;
 
-    printf("Enter any alphabet: ");
+    printf("Enter any alphabet: "); // user input
     scanf("%c", &ch);
 
-    switch(ch)
+    switch(ch) // switch-case
     {
         case 'a': 
             printf("Vowel");

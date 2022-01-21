@@ -1,7 +1,7 @@
-/************************************************
+/*
 Find the total number of alphabets, digits or 
 special characters in a string
-*************************************************/
+*/
 
 
 #include <stdio.h>
@@ -20,26 +20,26 @@ void main()
 
        printf("\n\nCount total number of alphabets, digits and special characters :\n");
        printf("--------------------------------------------------------------------\n"); 	
-       printf("Input the string : ");
+       printf("Input the string : "); // user input
        fgets(str, sizeof str, stdin);	
        
 
-    while(str[i]!='\0')
+    while(str[i] != '\0')
     {
-        if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
+        if((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) // conditions
         {
             alp++;
         }
-        else if(str[i]>='0' && str[i]<='9')
+        else if(str[i]>='0' && str[i]<='9') // digits
         {
             digit++;
         }
-        else
+        else // special character
         {
             splch++;
         }
 
-        i++;
+        i++; // increment
     }
 
     printf("Number of Alphabets in the string is : %d\n", alp);
