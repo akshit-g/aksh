@@ -3,57 +3,34 @@ Program to delete element in array
 */
 
 #include <stdio.h>
- 
-// To search a key to be deleted
-int findElement(int arr[], int n,
-                int key);
- 
-// Function to delete an element
-int deleteElement(int arr[], int n,
-                  int key)
-{
-    int pos = findElement(arr, n, key);
- 
-    if (pos == - 1)
-    {
-        printf("Element not found");
-        return n;
-    }
- 
-    int i;
-    for (i = pos; i < n - 1; i++)
-        arr[i] = arr[i + 1];
- 
-    return n - 1;
-}
 
-int findElement(int arr[], int n, int key)
-{
-    int i;
-    for (i = 0; i < n; i++)
-        if (arr[i] == key)
-            return i;
- 
-    return - 1;
-}
- 
 int main()
 {
-    int i;
-    int arr[] = {10, 50, 30, 40, 20};
- 
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int key = 30;
- 
-    printf("Array before deletion\n");
-    for (i = 0; i < n; i++)
-      printf("%d  ", arr[i]);
- 
-    n = deleteElement(arr, n, key);
- 
-    printf("\nArray after deletion\n");
-    for (i = 0; i < n; i++)
-      printf("%d  ", arr[i]);
- 
+    int array[100], position, c, n;
+    
+    printf("Enter number of elements in array\n");
+    scanf("%d", &n);
+    
+    printf("Enter %d elements\n", n);
+    
+    for ( c = 0 ; c < n ; c++ )
+    scanf("%d", &array[c]);
+    
+    printf("Enter the location where you wish to delete element\n");
+    scanf("%d", &position);
+    
+    if ( position >= n+1 )    
+    printf("Deletion not possible.\n");
+    
+    else
+    {    
+        for ( c = position - 1 ; c < n - 1 ; c++ ) 
+        array[c] = array[c+1];        
+        
+        printf("Resultant array is\n");
+        
+        for( c = 0 ; c < n - 1 ; c++ )        
+        printf("%d\n", array[c]);        
+    }    
     return 0;
 }
