@@ -1,9 +1,9 @@
-/******************************************************************************
+/*
 Given two numbers. Demonstrate the swapping of the values without 3rd variable
-*******************************************************************************/
-
+*/
 
 #include <stdio.h>
+
 int main()
 {
     int x = 10, y = 5;
