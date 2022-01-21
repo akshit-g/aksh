@@ -1,8 +1,9 @@
-/******************************************************
- * Program to print all numbers in a fibonacci series
- ******************************************************/
+/*
+Program to print all numbers in a fibonacci series
+*/
 
 #include <stdio.h>
+
 int main() {
 
   int i, n;
