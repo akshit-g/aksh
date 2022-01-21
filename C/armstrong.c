@@ -1,6 +1,7 @@
-/********************************************************
+/*
  C program to print Armstrong numbers from 1 to n
-*********************************************************/
+*/
+
 #include <stdio.h>
 #include <math.h>
 

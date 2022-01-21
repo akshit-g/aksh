@@ -1,6 +1,7 @@
-/************************************
+/*
 Program to delete element in array
-*************************************/
+*/
+
 #include <stdio.h>
  
 // To search a key to be deleted
