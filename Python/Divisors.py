@@ -1,5 +1,7 @@
-n=int(input("Enter an integer:"))
-print("The divisors of the number are:")
+# Program to find the divisors of an integer
+
+n = int(input("Enter an integer:"))
+print ("The divisors of the number are:")
 for i in range(1,n+1):
-    if(n%i==0):
-        print(i)
+    if (n%i==0):
+        print (i)
