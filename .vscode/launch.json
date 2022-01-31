@@ -9,9 +9,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "d:/Akshit/Code/aksh",
+      "cwd": "d:/Akshit/Code/aksh/C",
       "environment": [],
-      "program": "d:/Akshit/Code/aksh/build/Debug/outDebug",
+      "program": "d:/Akshit/Code/aksh/C/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
