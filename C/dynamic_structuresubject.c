@@ -1,3 +1,9 @@
+/*
+Design a structure ‘subject’ to store the details of the subject like subject name and subject code
+Using structure pointer allocate memory for the structure dynamically so as to obtain details of ‘n’ subjects using for loop
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 struct subject // initialize structure
