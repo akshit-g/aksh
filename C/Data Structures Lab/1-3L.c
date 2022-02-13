@@ -19,7 +19,7 @@ int main()
 }
 
 
-void convert(char *S)                      //Function convert to change the case
+void convert(char *S)  // function to change case
 {
     char *str = S;
     int i;
