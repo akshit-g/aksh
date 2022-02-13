@@ -1,7 +1,7 @@
 /*
 Akshit Gandotra
 Question 4 (Lab)
-Program to calculate the sum of Rows and Columns of a Matrix of order(row*column)
+Program to calculate the sum of Rows and Columns of a Matrix of order (row * column)
 */
 
 #include <stdio.h>
