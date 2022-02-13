@@ -30,5 +30,5 @@ int sum(int A[], int n, int m) // function to calculate sum of array
 {
     if(n == m) // recursion base condition
     return 0;                         
-    return A[m] + sum(A, n, m+1); // recurive function
+    return A[m] + sum(A, n, m+1); // recursive function
 }
