@@ -26,7 +26,7 @@ int main()
 
 void input(struct product *i)  // function to input data in the variables
 {
-    printf("Enter Product Name, Price per Unit, and the Number of Quantaties Purchased :- \n");
+    printf("Enter Product Name, Price per Unit, and the Number of Quantaties Purchased :\n");
     gets(i -> name);  // user input
     scanf("%f", &i->price);  // user input
     scanf("%d", &i->quant);  // user input
@@ -35,7 +35,7 @@ void input(struct product *i)  // function to input data in the variables
 
 void print(struct product *i)  // funtion to print data of the Product
 {
-    printf("Product Name :- ");
+    printf("Product Name : ");
     puts(i -> name );
-    printf("Number of Quantities :- %d \nPrice per unit :- %f \nTotal Price :- %f", i -> quant, i -> price, i -> totalprice);
+    printf("Number of Quantities : %d \nPrice per unit : %f \nTotal Price : %f", i -> quant, i -> price, i -> totalprice);
 }
