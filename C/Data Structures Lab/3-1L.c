@@ -96,8 +96,8 @@ void insertAtEnd()
 	scanf("%d", &data);
 
 	// Changes links
-	temp->link = 0;
-	temp->info = data;
+	temp -> link = 0;
+	temp -> info = data;
 	head = start;
 	while (head -> link != NULL) {
 		head = head -> link;
