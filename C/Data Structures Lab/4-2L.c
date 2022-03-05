@@ -1,7 +1,7 @@
 /*
 Akshit Gandotra
 Question 2 (Lab)
-Implement Doubly Linked list and its operations
+Use the stack operations developed in Problem 1 to reverse a string using Stack
 */
 
 #include <stdio.h>
@@ -24,7 +24,7 @@ int main()
     char str[MAX];
     int i;
     
-    printf("Input a string: ");
+    printf("Input a string:\n");
     scanf("%[^\n]s", str);
     
     for(i = 0; i < strlen(str); i++)
@@ -33,7 +33,7 @@ int main()
     for(i = 0; i < strlen(str); i++)
         str[i] = pop();
 
-    printf("Reversed String is: %s\n", str);
+    printf("\nReversed String is:\n%s\n\n", str);
     
     return 0;
 }
