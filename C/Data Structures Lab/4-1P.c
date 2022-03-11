@@ -1,4 +1,9 @@
-//This is a C Program to Implement two Stacks using a Single Array & Check for Overflow & Underflow
+/*
+Akshit Gandotra
+Question 1 (Practice)
+Using array and functions implememnt two stacks and its operations
+*/
+
 #include <stdio.h>
 #define SIZE 100
  
