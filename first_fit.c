@@ -18,7 +18,7 @@ int main()
 	printf("Enter size of each process:\n");
 	for(i = 0; i < PNum; i++)
 		scanf("%f", &ProcessSize[i]);
-	for(i = 0; i < PNum; i++)         //allocation as per first fit
+	for(i = 0; i < PNum; i++)
 		for(j = 0; j < HNum; j++)
 			if(flags[j] == 0 && HoleSize[j] >= ProcessSize[i])
 			{
@@ -26,7 +26,8 @@ int main()
 				flags[j] = 1;
 				break;
 			}
-	//display allocation details
+
+
 	printf("\nHole No.\tSize\t\t\tProcess No.\t\tSize");
 	for(i = 0; i < HNum; i++)
 	{
