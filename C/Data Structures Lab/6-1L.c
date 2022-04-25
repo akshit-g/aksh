@@ -6,7 +6,7 @@ Implement Linear Search on a Two Way Header Linked List.
 
 #include<stdlib.h>
 #include<stdio.h>
-struct HeaderList //Structure created
+struct HeaderList  // Structure created
 {
 	char HeaderData[100];
 	int data;
