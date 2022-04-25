@@ -1,7 +1,7 @@
 /*
 Akshit Gandotra
 Question 1 (Practice)
-Using array and functions implememnt two stacks and its operations
+Using array and functions implement two stacks and its operations
 */
 
 #include <stdio.h>
