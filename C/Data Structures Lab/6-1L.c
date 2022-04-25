@@ -1,7 +1,7 @@
 /*
 Akshit Gandotra
 Question 1 (Lab)
-Using Array and functions implement Doubly Ended Queue (Input Restricted Queue and Output Restricted Queue) and its operations.
+Implement Linear Search on a Two Way Header Linked List.
 */
 
 #include<stdlib.h>
