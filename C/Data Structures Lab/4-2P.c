@@ -15,7 +15,7 @@ struct Stack
     unsigned capacity;
     int* array;
 };
- 
+
 // operations
 struct Stack* createStack( unsigned capacity )
 {
