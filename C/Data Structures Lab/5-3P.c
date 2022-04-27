@@ -1,7 +1,8 @@
 /*
 Akshit Gandotra
 Question 3 (Practice)
-Using Array and functions implement Doubly Ended Queue (Input Restricted Queue and Output Restricted Queue) and its operations.
+Using Array and functions implement Doubly Ended Queue (Input Restricted
+Queue and Output Restricted Queue) and its operations.
 */
 
 # include <stdio.h>
