@@ -6,76 +6,63 @@ using ‘Insertion Sort’ algorithm and write back in another text file.
 */
 
 #include <stdio.h>
-#define Num 100
-static int count = 0;
-
-void ReadFile(int *array)
+int array[50], i = 0;
+void read(FILE *ptr)
 {
-	FILE *fp = fopen("d1.txt","r");
-
-	while(1)
+    int a = 0;
+    while(!feof(ptr))
     {
-		if(feof(fp))
-        {
-			break;
-		}
-		fscanf(fp, "%d", &array[count]);
-		count++;
-	}
-
-	fclose(fp);
-	printf("\t**FILE read Successfully**\n");	
-}
-
-void swap(int *array, int i, int j)
-{
-    int temp = array[i];
-    array[i] = array[j];
-    array[j] = temp; 
-}
-
-void InsertionSort(int *array, int count)
-{
-	for (int i=0; i<count-1; i++)
-    {
-        for (int j=i+1; j>0; j--)
-        {
-            if(array[j] < array[j-1])
-            {
-                swap(array, j, j-1); 
-            }
-        }
+        fscanf(ptr, "%d", &array[a]);
+        a++;
+        i++;
     }
 }
-
-void DataDisplay(int *array)
+void write()
 {
-	for(int i=0; i<count; i++)
+    FILE *ptr1 = fopen("text2.txt", "a");
+    for(int j = 1; j < i; j++)
     {
-		printf("%d ",*(array+i));
-	}
+        fprintf(ptr1, "%d ", array[j]);
+    }
 }
-
-void WriteFile(int *array)
+void inseration_sort(int i)
 {
-	FILE *fptr;
-	fptr = fopen("d2.txt","wb");
-	for(int i=0; i<count; i++)
+    int j;
+    for(j = 1; j < i; j++)
     {
-		putw(*(array+i), fptr);
-	}
-	fclose(fptr);
+        int temp = array[j];
+        int k = j - 1;
+        while(k >= 0 && array[k] > temp)
+        {
+            array[k+1] = array[k];
+            k--;
+        }
+        array[k+1] = temp;
+    }
 }
 
 void main()
 {
-	int array[Num];
-	ReadFile(array);
-    printf("Original Data:\n");
-	DataDisplay(array);
-    InsertionSort(array, count);
-	printf("\n\nSorted Data:\n");
-	DataDisplay(array);
-
-	WriteFile(array);
+    FILE *ptr = fopen("text1.txt", "r");
+    if(ptr == NULL)
+    {
+        printf("\nNo such file");
+    }
+    else
+    {
+        read(ptr);
+    }
+    printf("\nBefore Sorting: ");
+    for(int j = 0; j < i-1; j++)
+    {
+        printf("%d ", array[j]);
+    }
+    printf("\n");
+    inseration_sort(i);
+    write();
+    printf("After Sorting: ");
+    for(int j = 1; j < i; j++)
+    {
+        printf("%d ", array[j]);
+    }
 }
