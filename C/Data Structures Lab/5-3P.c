@@ -26,7 +26,7 @@ void insert_right()
 		right = 0;
 	else
 		right = right+1;
-	printf("Input the    element for adding in queue : ");
+	printf("Input the element for adding in queue : ");
 	scanf("%d",  &added_item);
 	deque_arr[right] = added_item ;
 }
