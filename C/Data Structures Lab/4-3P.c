@@ -83,7 +83,7 @@ void EvalPostfix(char postfix[])
             push(val);
         }
     }
-    printf(" \n Result of expression evaluation : %d \n", pop());
+    printf(" \nResult of expression evaluation :\n%d\n", pop());
 }
 
 int main()
@@ -91,9 +91,9 @@ int main()
 
     int i;
 
-    /* declare character array to store postfix expression */
+    // declare character array to store postfix expression
     char postfix[POSTFIXSIZE];
-    printf(" \nEnter postfix expression: ");
+    printf(" \nEnter postfix expression:\n");
 
 
     for (i = 0; i <= POSTFIXSIZE - 1; i++)
