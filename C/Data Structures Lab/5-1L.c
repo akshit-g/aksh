@@ -89,7 +89,7 @@ int main()
 
 			case 1:
 
-			printf("Enter the element which is to be inserted");
+			printf("Enter the element which is to be inserted:\t");
 			scanf("%d", &x);
 			enqueue(x);
 			break;
