@@ -5,66 +5,65 @@ Read the numbers from a text file sort them into an array
 using 'Selection Sort' algorithm and write back in another text file.
 */
 
-#include <stdio.h>
-#define Num 100
-static int count = 0;
-
-void ReadFile(int *array) {
-	FILE *fp = fopen("d1.txt","r");
-	
-	while(1) {
-		if(feof(fp)) {
-			break;
-		}
-		fscanf(fp, "%d", &array[count]);
-		count++;
-	}
-	
-	fclose(fp);
-	printf("\t**FILE read Successfully**\n");	
-}
-
-void swap(int *array, int i, int j) {
-    int temp = array[i];
-    array[i] = array[j];
-    array[j] = temp; 
-}
-
-void SelectionSort(int arr[], int n) {
-    int i, j, min_idx;
-    for (i = 0; i < n-1; i++) {
-        min_idx = i;
-        for (j = i+1; j < n; j++)
-          if (arr[j] < arr[min_idx])
-            min_idx = j;
-        swap(&arr[min_idx], &arr[i]);
+#include<stdio.h>
+int array[50], i = 0;
+void read(FILE *ptr)
+{
+    int a = 0;
+    while(!feof(ptr))
+    {
+        fscanf(ptr, "%d", &array[a]);
+        a++;
+        i++;
     }
 }
-void DataDisplay(int *array) {
-	for(int i=0; i<count; i++) {
-		printf("%d ",*(array+i));
-	}
+void write()
+{
+    FILE *ptr1 = fopen("selection.txt", "a");
+    for(int j = 1; j < i; j++)
+    {
+        fprintf(ptr1, "%d ", array[j]);
+    }
 }
-
-void WriteFile(int *array) {
-	FILE *fptr;
-	fptr = fopen("d2.txt","wb");
-	for(int i=0; i<count; i++) {
-		putw(*(array+i), fptr);
-	}
-	fclose(fptr);
-}
-
-void main() {
-	int array[Num];
-	ReadFile(array);
-	
-	printf("Original Data:\n");
-	DataDisplay(array);
-
-     SelectionSort(array, count);
-	printf("\n\nSorted Data:\n");
-	DataDisplay(array);
-
-	WriteFile(array);
+void selection_sort()  
+{  
+    int j, t, small;  
+    for (j = 0; j < i-1; j++)    // One by one move boundary of unsorted subarray  
+    {  
+        small = j; //minimum element in unsorted array   
+        for (t = j+1; t < i; t++)  
+        if (array[t] < array[small])
+        {
+            small = t;
+        }
+    // Swap the minimum element with the first element  
+    int temp = array[small];  
+    array[small] = array[j];  
+    array[j] = temp;  
+    }  
+}  
+void main()
+{
+    FILE *ptr = fopen("text1.txt", "r");
+    if(ptr == NULL)
+    {
+        printf("\nNo such file");
+    }
+    else
+    {
+        read(ptr);
+    }
+    printf("\nBefore Sorting: ");
+    for(int j = 0; j < i-1; j++)
+    {
+        printf("%d ", array[j]);
+    }
+    printf("\n");
+    selection_sort();
+    write();
+    printf("After Sorting: ");
+    for(int j = 1; j < i; j++)
+    {
+        printf("%d ", array[j]);
+    }
 }
