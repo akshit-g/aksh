@@ -71,7 +71,7 @@ void display()
 		printf("Priority Item\n");
 		while(ptr != NULL)
 		{
-			printf("%5d%5d\n",ptr -> priority,ptr -> info);
+			printf("%5d%5d\n",ptr -> priority, ptr -> info);
 			ptr = ptr -> link;
 		}
 	}
